@@ -1,0 +1,13 @@
+.clean-img {
+	border: none !important;
+	box-shadow: none !important;
+}
+
+.defautl-slide-style {
+	text-align: left !important;
+	font-size: 24px !important;
+}
+
+.defautl-slide-style ul li {
+	margin-bottom: 10px;
+}
