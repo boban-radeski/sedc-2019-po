@@ -17,12 +17,12 @@ E-mail: radeski.boban@gmail.com
   git config --global user.email johndoe@example.com
   ```
 
-## Materials and resources from the class
+## Materials and Resources From the Class
 
 On this repository I will push all the materials.
 Download as zip or clone the repository to have the latest version of the materials we use such as presentaions or code directories/files.
 
-## Additional Resources for learning Git
+## Additional Resources for Learning Git
 
 1. https://learngitbranching.js.org/
 2. https://git-scm.com/
