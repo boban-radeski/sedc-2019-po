@@ -1,0 +1,330 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>SEDC - Project Organization </title>
+
+	<link rel="stylesheet" href="assets/css/reveal.css">
+	<link rel="stylesheet" href="assets/css/theme/white.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="assets/lib/css/zenburn.css">
+
+	<!-- custom style -->
+	<link rel="stylesheet" href="assets/css/custom.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'assets/css/print/pdf.css' : 'assets/css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<div style="text-align: left">
+					<div>
+						<img src="assets/img/intro.jpg" width="350" class="clean-img" alt="intro">
+					</div>
+					<h2> Project Organization</h2>
+					<div>
+						<img src="assets/img/sedc-logo.png" class="clean-img" alt="sedc logo" />
+					</div>
+					<div>
+						Trainer: <strong> Boban Radeski </strong> <br />
+						E-mail: <a href="mailto: radeski.boban@gmail.com">radeski.boban@gmail.com</a>
+					</div>
+					<div style="margin-top: 30px; font-size: 20px;">
+						<small>
+							&copy; 2019 Seavus Education &amp; Development Center | Boban Radeski
+						</small>
+					</div>
+				</div>
+			</section>
+			<section class="defautl-slide-style">
+				<h2> Workshop </h2>
+				<ul>
+					<li>
+						Develop a simple web site as in the image bellow and commit/push to the repository:
+					</li>
+				</ul>
+				<img src="assets/img/workshop1.png" alt="workshop 1">
+			</section>
+			<section class="defautl-slide-style">
+				<h2> Basic GIT Workflow </h2>
+				<ul>
+					<li>
+						Git is a software that allows you to keep track of changes made to a project over time. Git works by recording
+						the changes you make to a project, storing those changes, then allowing you to reference them as needed.
+						<br>
+						<br>
+						<ul>
+							<li>Create the following files</li>
+							<li>Index.html which will contain the HTML structure </li>
+							<li>Style.css for the style</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section class="defautl-slide-style">
+				<h2> Basic GIT Workflow </h2>
+				<ul>
+					<li> <code class="hljs xml"> git init </code> </li>
+					<li>
+						The word init means initialize. The command sets up all the tools Git needs to begin tracking changes made to the
+						project.
+						In the terminal, initialize a new Git project.
+					</li>
+				</ul>
+			</section>
+			<section class="defautl-slide-style">
+				<h2> Basic GIT Workflow </h2>
+				<ul>
+					<li>
+						We have a Git project. A Git project can be thought of as having three parts:
+					</li>
+					<li>
+						<ol>
+							<li>
+								A <strong>Working Directory</strong>: where you'll be doing all the work: creating, editing, deleting
+								and organizing files
+							</li>
+							<li>
+								A <strong> Staging Area </strong>: where you'll list changes you make to the working directory
+							</li>
+							<li>
+								A <strong> Repository </strong>: where Git permanently stores those changes as different versions of the
+								project
+							</li>
+
+						</ol>
+					</li>
+					<li>
+						The Git workflow consists of editing files in the working directory, adding files to the staging area, and
+						saving
+						changes to a Git repository. In Git, we save changes with a commit, which we will learn more about in this
+						lesson.
+					</li>
+				</ul>
+			</section>
+			<section class="defautl-slide-style">
+				<h2> Basic GIT Workflow </h2>
+				<img src="assets/img/wf.png" alt="work flow">
+			</section>
+			<section class="defautl-slide-style">
+				<h2> Basic GIT Workflow </h2>
+				<ul>
+					<li>
+						<code class="hljs xml">git status</code>
+						To check the status of the changes.
+					</li>
+				</ul>
+				<img src="assets/img/gitstatus.png" alt="git status">
+			</section>
+			<section class="defautl-slide-style">
+				<h2> Basic GIT Workflow </h2>
+				<ul>
+					<li> <strong> git add </strong>
+						<p>
+							The git add command adds a change in the working directory to the staging area. It tells Git that you want to
+							include updates to a particular file in the next commit
+						</p>
+					</li>
+					<li> <strong> add all </strong>
+						<p>
+							You can also type <strong>git add -A </strong>. where the dot stands for the current directory, so everything in
+							and beneath it is
+							added. The -A ensures even file deletions are included.
+						</p>
+					</li>
+					<li> <strong>git reset</strong>
+						<p>
+							You can use git reset [filename] to remove a file or files from the staging area.
+						</p>
+						In the console type:
+						<br />
+						<pre><code class="hljs xml" data-trim contenteditable>
+
+							git add index.html
+							git add style.css
+
+							</code></pre>
+					</li>
+				</ul>
+			</section>
+			<section class="defautl-slide-style">
+				<h2> Basic GIT Workflow </h2>
+				<ul>
+					<li> <strong> git diff </strong></li>
+					<li>
+						Open index.html and add the basic HTML structure and save it.
+						Since the file is tracked, we can check the differences between the working directory and the staging area with:
+						<code class="hljs xml" data-trim contententeditable>
+							git diff index.html
+						</code>
+					</li>
+					<img src="assets/img/git-diff.png" alt="git diff">
+				</ul>
+			</section>
+			<section class="defautl-slide-style">
+				<h2> Basic GIT Workflow </h2>
+				<ul>
+					<li>
+						<strong>git commit</strong>
+						<p>
+							Notice how Git says changes to be committed? The files listed here are in the Staging Area, and they are not in
+							our repository yet. We could add or remove files from the stage before we store them in the repository.
+							To store our staged changes we run the commit command with a message describing what we've changed. Let's do
+							that now by typing: 
+							<br/>
+							<br/>
+							<code class="hljs xml">
+								git commit –m "Commit message"
+							</code>
+						</p>
+					</li>
+					<li> Standard Conventions for Commit Messages: </li>
+					<li>
+						<ul>
+							<li> Must be in quotation marks </li>
+							<li>Written in the present tense</li>
+							<li> Should be brief (50 characters or less) when using –m </li>
+						</ul>
+					</li>
+					<li>
+						In the terminal write:
+						<code class="hljs xml">
+							git commit –m "add initial version of index and style"
+						</code>
+					</li>
+				</ul>
+			</section>
+			<section class="defautl-slide-style">
+				<h2> Basic GIT Workflow </h2>
+				<ul>
+					<li>
+						<strong> git log </strong>
+						<p>
+							Often with Git, you'll need to refer back to an earlier version of a project. Commits are stored chronologically
+							in the repository and can be viewed.
+						</p>
+					</li>
+				</ul>
+				<img src="assets/img/git-log.png" alt="git log">
+			</section>
+			<section class="defautl-slide-style" data-background="rgb(0, 122, 201)">
+				<h2> Generalization </h2>
+				<p>
+					You have now been introduced to the fundamental Git workflow. You learned a lot! Let's take a moment to
+					generalize:
+				</p>
+				<ul>
+					<li>
+						Git is the industry-standard version control system for web developers
+					</li>
+					<li>
+						Use Git commands to help keep track of changes made to a project:
+						<ul>
+							<li> <strong>git init </strong> creates a new Git repository </li>
+							<li> <strong>git status </strong> inspects the contents of the working directory and staging area </li>
+							<li> <strong>git add </strong> adds files from the working directory to the staging area </li>
+							<li> <strong>git diff </strong> shows the difference between the working directory and the staging area </li>
+							<li> <strong>git commit </strong> permanently stores file changes from the staging area in the repository </li>
+							<li> <strong>git log </strong> shows a list of all previous commits </li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section class="defautl-slide-style">
+				<h2> Note </h2>
+				<ul>
+					<li>
+						When you change a file which is already in the repository, you have to git add it again if you want it to be
+						staged.
+					</li>
+					<li>
+						This allows you to commit only a subset of the changes you made since the last commit. For example, let's say you
+						have file index.html, file style.css and file script.js. You modify file index.html and file style.css but the
+						changes are very different in nature and you don't want all of them to be in one single commit. You issue:
+						<br>
+						<br>
+						<div>
+							git add index.html
+						</div>
+						<div>
+							git commit index.html -m "bugfix, in index"
+						</div>
+						<div>
+							git add style.css
+						</div>
+						<div>
+							git commit style.css -m "new feature, in style"
+						</div>
+						<div>
+							<br>
+							As a side note, if you want to commit everything you can just type:
+							git commit -a
+						</div>
+					</li>
+				</ul>
+			</section>
+
+			<section class="defautl-slide-style">
+				<h2> Thank You!</h2>
+				<ul>
+					<li>
+						Questions/Recap
+					</li>
+				</ul>
+			</section>
+
+			<!-- navigation -->
+			<aside class="controls" style="display: block;">
+				<div class="navigate-left"></div>
+				<div class="navigate-right"></div>
+				<div class="navigate-up"></div>
+				<div class="navigate-down enabled"></div>
+			</aside>
+		</div>
+	</div>
+
+	<script src="assets/lib/js/head.min.js"></script>
+	<script src="assets/js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+			// Transition speed
+			transitionSpeed: 'default', // default/fast/slow
+
+			// Enable slide navigation via mouse wheel
+			mouseWheel: true,
+			dependencies: [
+				{ src: 'assets/plugin/markdown/marked.js' },
+				{ src: 'assets/plugin/markdown/markdown.js' },
+				{ src: 'assets/plugin/notes/notes.js', async: true },
+				{ src: 'assets/plugin/zoom-js/zoom.js', async: true },
+				{ src: 'assets/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+
+</html>
