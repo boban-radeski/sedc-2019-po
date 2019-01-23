@@ -20,7 +20,7 @@ E-mail: radeski.boban@gmail.com
 ## Materials and Resources From the Class
 
 On this repository I will push all the materials.
-Download as zip or clone the repository to have the latest version of the materials we use such as presentaions or code directories/files. On the downloaded directory **Project Organization Classes** you will find the `assets` and `classXX.html`, open the `index.html` in your browser to preview the presentation.
+Download as zip or clone the repository to have the latest version of the materials we use such as presentaions or code directories/files. On the downloaded directory **Project Organization Classes** you will find the `assets` and `classXX.html`, open the `classXX.html` in your browser to preview the presentation.
 
 ## Additional Resources for Learning Git
 
