@@ -26,3 +26,4 @@ Download as zip or clone the repository to have the latest version of the materi
 
 1. https://learngitbranching.js.org/
 2. https://git-scm.com/
+3. https://gitexplorer.com/
