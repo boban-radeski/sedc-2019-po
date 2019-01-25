@@ -17,6 +17,9 @@ E-mail: radeski.boban@gmail.com
   git config --global user.email johndoe@example.com
   ```
 
+## Install SourceTree client for git
+https://www.sourcetreeapp.com/
+
 ## Materials and Resources From the Class
 
 On this repository I will push all the materials.
