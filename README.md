@@ -27,3 +27,11 @@ Download as zip or clone the repository to have the latest version of the materi
 1. https://learngitbranching.js.org/
 2. https://git-scm.com/
 3. https://gitexplorer.com/
+
+
+## Homework 01
+- create new repo, name: **sedc-po-2019-hm-01**
+- implement the basic HTML and style in `index.html` and `style.css` into the **master branch**
+- create new branch, name: **implement-header**
+- checkout to the new branch **implement-header** and implement the header in it
+- push the new branch to the REMOTE REPOSITORY
