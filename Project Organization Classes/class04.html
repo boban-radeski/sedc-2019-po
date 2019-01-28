@@ -1,0 +1,263 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>SEDC - Project Organization </title>
+
+	<link rel="stylesheet" href="assets/css/reveal.css">
+	<link rel="stylesheet" href="assets/css/theme/white.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="assets/lib/css/zenburn.css">
+
+	<!-- custom style -->
+	<link rel="stylesheet" href="assets/css/custom.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'assets/css/print/pdf.css' : 'assets/css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<div style="text-align: left">
+					<div>
+						<img src="assets/img/intro.jpg" width="350" class="clean-img" alt="intro">
+					</div>
+					<h2> Project Organization</h2>
+					<div>
+						<img src="assets/img/sedc-logo.png" class="clean-img" alt="sedc logo" />
+					</div>
+					<div>
+						Trainer: <strong> Boban Radeski </strong> <br />
+						E-mail: <a href="mailto: radeski.boban@gmail.com">radeski.boban@gmail.com</a>
+					</div>
+					<div style="margin-top: 30px; font-size: 20px;">
+						<small>
+							&copy; 2019 Seavus Education &amp; Development Center | Boban Radeski
+						</small>
+					</div>
+				</div>
+			</section>
+			<section class="defautl-slide-style">
+				<section>
+					<h2> Git Merge </h2>
+					<ul>
+						<li>
+							In the most frequent use cases, git merge is used to combine two branches.
+							<p style="text-align: center">
+								<img src="assets/img/git-merge-01.png" width="350px" class="clean-img" alt="git merge">
+							</p>
+							<p style="text-align: center">
+								<img src="assets/img/git-merge-02.png" width="350px" class="clean-img" alt="git merge">
+							</p>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Git merge usage</h2>
+					<ul>
+						<li> Merge can be initiated by executing <strong> git merge [branch name] </strong> where [branch name] is the
+							name of the branch that will be merged into the receiving branch for exmample, if we want to merge a branch with
+							name <strong> implement-footer </strong> into the <strong> master branch</strong> we need to following:
+							<ol>
+								<li> git checkout master </li>
+								<li> git merge implement-footer </li>
+								<li> delete the branch <strong>implement-footer </strong></li>
+							</ol>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Git merge in SourceTree </h2>
+					<p>
+						<img src="assets/img/git-merge.png" width="650px" class="clean-img" alt="git merge">
+					</p>
+				</section>
+			</section>
+			<section class="defautl-slide-style">
+				<section>
+					<h2> Git Rebase </h2>
+					<ul>
+						<li>
+							Rebasing is the process of moving or combining a sequence of commits to a new base commit. Rebasing is most
+							useful and easily visualized in the context of a feature branching workflow. The general process can be
+							visualized as the following:
+							<p style="text-align: center;">
+								<img src="assets/img/git-rebase.svg" width="550px" class="clean-img" alt="git rebase">
+							</p>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<ul>
+						<li>
+							From a content perspective, rebasing is changing the base of your branch from one commit to another making it
+							appear as if you'd created your branch from a different commit. Internally, Git accomplishes this by creating
+							new
+							commits and applying them to the specified base. It's very important to understand that even though the branch
+							looks the same, it's composed of entirely new commits.
+						</li>
+						<li>
+							For example, consider a situation where the master branch has progressed since you started working on a feature
+							branch. You want to get the latest updates to the master branch in your feature branch, but you want to keep
+							your branch's history clean so it appears as if you've been working off the latest master branch. This gives the
+							later benefit of a clean merge of your feature branch back into the master branch.
+						</li>
+						<li>
+							Read more about <strong>git rebase</strong> <a href="https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase"
+							 target="_blank">on this link</a>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2> Git rebase in SourceTree </h2>
+					<ul>
+						<li> We have branch with name <strong> implement-footer </strong> on which we are implementing the footer </li>
+						<li> In the meantime we have added a new page <strong>aboutus.html</strong> with basic HTML implementation in the
+							<strong> master branch</strong> </li>
+						<li> If we want to take the newest changes from master branch (aboutus.html), we need to do the following:
+							<ol>
+								<li> checkout <strong>master branch </strong> </li>
+								<li> <strong>git pull </strong>, pull the latest changes from the Remote Repository</li>
+								<li>
+									<strong>git checkout implement-footer </strong> and then <strong> git rebase </strong>
+									<p style="text-align: center">
+										<img src="assets/img/sourcetree-reabse.png" width="550px" class="clean-img" alt="sourcetree rebase">
+									</p>
+								</li>
+							</ol>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="defautl-slide-style">
+				<section>
+					<h2> Solve merge conflicts in SourceTree </h2>
+					<p>
+						Let's face with following situations:
+					</p>
+					<ul>
+						<li> on the current project in the <strong>master branch</strong> create a new file, aboutus.html(if is not
+							created previously)</li>
+						<li> make local changes to it for instance add new section with heading </li>
+						<li> commit the changes, then push to RR </li>
+						<li> in the meantime go to the RR and, make direct changes to the aboutus.html file and commit the changes </li>
+						<li> if the changes from the RR are in the same lines as in the local file, aboutus.html the SourceTree will
+							notify for the merge conflicts because there is two versions for the same file</li>
+						<li> go to the next slide for a solution</li>
+					</ul>
+				</section>
+				<section>
+					<h2> git merge in sourcetree app</h2>
+					<p>
+						<img src="assets/img/resolve-conflicts.png" class="clean-img" alt="resolve conflicts">
+					</p>
+				</section>
+				<section>
+					<h2> git merge in sourcetree app</h2>
+					<p>
+						<img src="assets/img/solve-conflicts.png" class="clean-img" alt="resolve conflicts">
+					</p>
+					<p>
+						Note: After merging we need to commit/push the changes to have in sync version with the RR
+					</p>
+				</section>
+			</section>
+			<section class="defautl-slide-style">
+				<section>
+
+					<h2> Git Ignore </h2>
+					<ul>
+						<li>
+							Git sees every file in your working copy as one of three things:
+						</li>
+						<li>
+							<ul>
+								<li>
+									<strong> tracked </strong> - a file which has been previously staged or committed;
+								</li>
+								<li>
+									<strong> suntracked </strong> - a file which has not been staged or committed; or
+								</li>
+								<li>
+									<strong> ignored </strong> - a file which Git has been explicitly told to ignore.
+									<p>
+										Ignored files are usually build artifacts and machine generated files that can be derived from your
+										repository
+										source or should otherwise not be committed
+									</p>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Gitignore in SourceTree</h2>
+					<p>
+						<img src="assets/img/gitignore.png" class="clean-img" alt="git ignore">
+					</p>
+				</section>
+			</section>
+
+			<section class="defautl-slide-style">
+				<h2> Thank You!</h2>
+				<ul>
+					<li>
+						Questions/Recap
+					</li>
+				</ul>
+			</section>
+
+			<!-- navigation -->
+			<aside class="controls" style="display: block;">
+				<div class="navigate-left"></div>
+				<div class="navigate-right"></div>
+				<div class="navigate-up"></div>
+				<div class="navigate-down enabled"></div>
+			</aside>
+		</div>
+	</div>
+
+	<script src="assets/lib/js/head.min.js"></script>
+	<script src="assets/js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+			// Transition speed
+			transitionSpeed: 'default', // default/fast/slow
+
+			// Enable slide navigation via mouse wheel
+			mouseWheel: true,
+			dependencies: [
+				{ src: 'assets/plugin/markdown/marked.js' },
+				{ src: 'assets/plugin/markdown/markdown.js' },
+				{ src: 'assets/plugin/notes/notes.js', async: true },
+				{ src: 'assets/plugin/zoom-js/zoom.js', async: true },
+				{ src: 'assets/plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+</body>
+
+</html>
