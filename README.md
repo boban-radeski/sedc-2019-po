@@ -20,6 +20,10 @@ E-mail: radeski.boban@gmail.com
 ## Install SourceTree client for git
 https://www.sourcetreeapp.com/
 
+## Install Kdiff3 merge tool
+http://kdiff3.sourceforge.net/
+Open SourceTree app -> Tools -> Options -> Diff -> Merge tool -> Kdiff3
+
 ## Materials and Resources From the Class
 
 On this repository I will push all the materials.
