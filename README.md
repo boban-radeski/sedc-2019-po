@@ -22,6 +22,7 @@ https://www.sourcetreeapp.com/
 
 ## Install Kdiff3 merge tool
 http://kdiff3.sourceforge.net/
+
 Open SourceTree app -> Tools -> Options -> Diff -> Merge tool -> Kdiff3
 
 ## Materials and Resources From the Class
