@@ -39,26 +39,26 @@ Download as zip or clone the repository to have the latest version of the materi
 - checkout to the new branch **implement-header** and implement the header in it
 - push the new branch to the REMOTE REPOSITORY
 
-## Workshop
-Workshop
+## Workshop (team|dream work)
+### One team lead, 2 or 3 team members
 
-1. create a new RR
-2. clone, pull
-3. master
+1. create a new Remote Repository on GitHub
+2. clone, pull - the other team members
+3. **master** should be the source of truth, always stable 
 
-3.1. implement-sidebar with CSS
+3.1. **implement-sidebar** branch for HTML and CSS code
 	3.1.1 List of page links (optional)
 	3.1.2 image of the (optional) 
 	3.1.3 display date and time (optional)
 	3.1.4 display weather information (optional)
 	
-3.2  implement-contact-form with CSS
-	3.2.1  push local branch to origin
+3.2  **implement-contact-form** branch for HTML and CSS code
+	3.2.1  push local branch to remote repository
 4. rebase 
 5. merge
 6. delete branches(wait for confirmation) 
 
 files to use: 
-index.html
-contact.html
-style.css
+`index.html`
+`contact.html`
+`style.css`
