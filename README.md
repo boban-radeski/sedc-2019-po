@@ -47,12 +47,14 @@ Download as zip or clone the repository to have the latest version of the materi
 3. **master** should be the source of truth, always stable 
 
 3.1. **implement-sidebar** branch for HTML and CSS code
+
 	3.1.1 List of page links (optional)
 	3.1.2 image of the (optional) 
 	3.1.3 display date and time (optional)
 	3.1.4 display weather information (optional)
 	
 3.2  **implement-contact-form** branch for HTML and CSS code
+
 	3.2.1  push local branch to remote repository
 4. rebase 
 5. merge
